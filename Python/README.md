@@ -1,1 +1,1 @@
-Collection of coding in Python
+Collection of code in Python
