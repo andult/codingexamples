@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminItems_Activity">
+
+    <!--  SEARCHBAR==================================-->
+    <EditText
+        android:id="@+id/searchIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/search_by_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#900C3F"
+        android:text="@string/search"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/searchIDText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--  ITEM DISPLAY===============================-->
+    <TextView
+        android:id="@+id/mainDisplay_admin"
+        android:layout_width="295dp"
+        android:layout_height="349dp"
+        android:text="@string/display_items"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <!--  DELETE/ADD ITEMS===============-->
+    <Button
+        android:id="@+id/createItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#900C3F"
+        android:text="@string/plus"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainDisplay"
+        app:layout_constraintVertical_bias="0.616" />
+
+    <Button
+        android:id="@+id/deleteItem"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#900C3F"
+        android:text="@string/delete_item"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/createItem"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainDisplay"
+        app:layout_constraintVertical_bias="0.614" />
+
+    <Button
+        android:id="@+id/editItemBtn"
+        android:layout_width="88dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#900C3F"
+        android:text="edit"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/createItem"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainDisplay"
+        app:layout_constraintVertical_bias="0.614" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
