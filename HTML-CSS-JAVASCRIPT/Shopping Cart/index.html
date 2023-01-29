@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="script.js">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <div id="page">
+        <div id="shoppingCart">
+            <h4>My Bag</h4>
+            <!-- items in shopping bag -->
+            <!-- Product #1---------------------------------- -->           
+            <div class="items">
+                <img src="book.jpg" alt="placeholder image">
+                <label class="itemName">
+                    <h5>The Invisible Life of Addie Larue by V.E. Schwab</h5>
+                    Quantity
+                    <select id="dropDown1">
+                        <option value=0>-</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                    </select>
+                </label>
+                <label id="itemPrice1" value="16.19">
+                    Price: $16.19
+                </label>
+            </div>
+
+            <!-- Product #2---------------------------------- -->
+            <div class="items">
+                <img src="catlight.png" alt="placeholder image">
+                <label class="itemName">
+                    <h5>LED Cat Light</h5>
+                    Quantity
+                    <select id="dropDown2">
+                        <option value=0>-</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                    </select>
+                </label>
+                <label id="itemPrice2" value="25.00">
+                    Price: $25.00
+                </label>
+            </div>
+
+            <!-- Product #3---------------------------------- -->
+            <div class="items">
+                <img src="yuzu.png" alt="placeholder image">
+                <label>
+                    <h5>Yuzuru Hanyu Pyeongchang Olympics Photobook</h5>
+                    Quantity
+                    <select id="dropDown3">
+                        <option value=0>-</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                    </select>
+                </label>
+                <label id="itemPrice3" value="51.25">
+                    Price: $51.25
+                </label>
+            </div>
+            <button id="updateQuantity">Update</button>
+        </div>
+
+        <!-- shipping and total -->
+        <aside>
+            <div>
+                <h3>Shipping</h3>
+                <input class="ship" type="radio" name="shipType" value="plane"> Plane: FREE
+                <br>
+                <input class="ship" type="radio" name="shipType" value="car"> Car: $2.00
+                <br>
+                <input class="ship" type="radio" name="shipType" value="train"> Train: $5.00
+                <br>
+                <input class="ship" type="radio" name="shipType" value="snail"> Snail: $50.00
+            </div>
+            <div>
+                <h3>Summary</h3>
+                <ul style="list-style-type:none;">
+                    <li id="subtotal">Subtotal:</li>
+                    <li id="shipping">Shipping:</li>
+                    <li id="tax">Tax:</li>
+                    <li id="total">Total:</li>
+                  </ul>  
+            </div>
+            <div id="discounts">
+                <span>Promo Code:</span>
+                <input id="promoCode" type="text" placeholder="Enter 'csumb'">
+                <button id="updateTotal">Update Total</button>
+                <br><br>
+                <button id="placeOrder">Place Order</button>
+            </div>
+        </aside>
+        <div class="popup" id="popup-1" >
+            <div class = "overlay"></div>
+            <div class="content">
+                <div class="close-btn">&times;</div>
+                <h3>Your Order Has Been Placed!</h3>
+                <img src="order-placed.gif" alt="order-placed gif">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
