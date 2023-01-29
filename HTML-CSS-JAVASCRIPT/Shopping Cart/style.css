@@ -1,0 +1,113 @@
+/* default page set-up---------------------------------------------------------------- */
+body {
+    background-color: white;
+}
+#page {
+    background-color: rgba(61, 3, 3, 0.219);
+    /* border-radius: 10%; */
+    padding: 30px;
+    margin: 1% 1% 1% 1%;
+    margin-top: 50px;
+    display: flex;
+}
+header {
+    text-align: center;
+}
+
+/* formats shopping cart---------------------------------------------------------------- */
+#shoppingCart {
+    background-color: rgba(240, 239, 239, 0.877);
+    width: 85%;
+    border: thin gray solid;
+    padding: 3%;
+}
+h4 {
+    padding-left: 30px;
+}
+/* formats individual items in shopping cart */
+.items {
+    border: thin gray solid;
+    margin: 15px;
+    border-radius: 10px;
+    display: flex;
+}
+label {
+    position: float;
+    padding: auto;
+    margin: auto;
+    margin-bottom: 15px;
+}
+h5 {
+    margin-bottom: 12%;
+}
+img {
+    width: 15%;
+    margin: 10px;
+    border: thin gray solid;
+}
+img:hover {
+    width: 30%;
+}
+
+/* formats shipping and total div-------------------------------------------------------------- */
+aside {
+    /* background-color: rgba(128, 128, 128, 0.164); */
+    background-color: rgba(240, 239, 239, 0.877);
+
+    width: 30%;
+    padding: 20px;
+    margin: 2%;
+    border: thin gray solid;
+    /* border-radius: 10px;; */
+}
+ul {
+    padding: 0px;
+}
+.ship {
+    /* display: block; */
+    /* display: block; */
+    width: auto;
+    margin: 10px;
+}
+
+/* pop-up window----------------------------------------------------- */
+.popup .overlay {       /*changes color of background*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+}
+
+.popup .content {       /*sets display for popup div*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 72%;
+    height: 70%;
+    text-align: center;
+}
+
+.popup .close-btn {     /*sets format for 'x' button*/
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {    /*turns on background*/
+    display: block;
+}
+
+.popup.active .content{     /*turns on pop up window*/
+    transform: translate(-50%, -50%) scale(1);
+}
