@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Superhero Quiz</h1>
+    </header>
+    <div>
+        <figure id="superHero">
+            <!-- placeholder for image -->
+        </figure>
+
+        <!-- div for questions -->
+        <div>
+            <h3>What is the real name of this superhero?</h3>
+            <select id="realNames">
+                <option>Select one...</option>
+            </select><span id="check"></span>
+            <h3>Where was <span id="heroName"></span> born?<span id="checkTown"></span></h3>
+            <input name="born" type="radio" value="new-york">New York
+            <input name="born" type="radio" value="krypton">Krypton
+            <input name="born" type="radio" value="bulgaria">Bulgaria
+            <input name="born" type="radio" value="gotham-city">Gotham City
+            <input name="born" type="radio" value="ohio">Ohio
+            <br><br>
+        </div>
+
+        <!-- div of buttons and villains -->
+        <div>
+            <button id="submit">Check Answers</button>
+            <button id="villains" style="display: none">SHOW VILLAINS</button>
+            <figure id="villainPics">
+                <!-- placeholder for vilians -->
+            </figure>
+        </div>
+    </div> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+   <br><br><br>
+                   <table border="1" width="600" cellpadding="10px">
+                    <tbody><tr><th>#</th><th>Task Description</th><th>Points</th></tr>
+                     <tr style="color:green">
+                      <td>1</td>
+                      <td>First question includes all elements (image, dropdown, button).
+												Data corresponds to the first hero retrieved from the API.
+												 <br></td>
+                      <td width="20" align="center">15</td>
+                     </tr>     
+                     <tr style="color:green">
+                      <td>2</td>
+                      <td>In the first question, the dropdown menu choices (heroes' names) come from the Web API. <br>
+                        </td>
+                      <td width="20" align="center">10</td>
+                    </tr>   
+										<tr style="color:red">
+                      <td>2</td>
+                      <td>In the first question, the dropdown menu choices (heroes' names) are displayed in a random order <br>
+                        </td>
+                      <td width="20" align="center">10</td>
+                    </tr>    
+                     <tr style="color:green">
+                      <td>3</td>
+                      <td> First question (actual name) is graded via JavaScript/jQuery using color-coded feedback<br></td>
+                      <td width="20" align="center">20</td>
+                    </tr>     
+										<tr style="color:green">
+                      <td>4</td>
+                      <td>In the second question, the hero name is displayed as part of the question (e.g., Where was "Batman" born?) <br></td>
+                      <td width="20" align="center">10</td>
+                    </tr> 
+                     <tr style="color:red">
+                      <td>5</td>
+                      <td>In the second question, the options (birth places) are displayed in random order <br></td>
+                      <td width="20" align="center">10</td>
+                    </tr>     
+                     <tr style="color:green">
+                      <td>6</td>
+                      <td>The second question is properly graded using the corresponding Web API<br></td>
+                      <td width="20" align="center">20</td>
+                    </tr>  
+                    <tr style="color:green">
+                      <td>7</td>
+                      <td>Color-coded feedback is provided for the second question<br></td>
+                      <td width="20" align="center">10</td>
+                    </tr>   
+										 <tr style="color:green">
+                      <td>8</td>
+                      <td>When clicking on the "Check Answers" button, the "check Answers" button is hidden and the "Show Villains" button is displayed<br></td>
+                      <td width="20" align="center">10</td>
+                    </tr>
+                    <tr style="color:green">
+                      <td>9</td>
+                      <td>When clicking on the "Show Villains" button, the images of the villains are displayed below the button<br></td>
+                      <td width="20" align="center">20</td>
+                    </tr>
+										 <tr style="color:black">
+                      <td>10</td>
+                      <td>The villain images are displayed next to each other and the villain names are displayed below each image<br></td>
+                      <td width="20" align="center">15</td>
+                    </tr>
+										<tr style="color:green">
+                      <td>11</td>
+                      <td>The exam uses Bootstrap or custom CSS with at least 10 properties<br></td>
+                      <td width="20" align="center">10</td>
+                    </tr>
+                     
+                    <tr style="color:green">
+                      <td>12</td>
+                      <td>This rubric is properly included AND UPDATED</td>
+                      <td width="20" align="center">3</td>
+                    </tr>
+                        
+                     <tr>
+                      <td></td>
+                      <td>T O T A L </td>
+                      <td width="20" align="center">&nbsp;</td>
+                    </tr> 
+                  </tbody></table>
+									
+									
+
+</html>
