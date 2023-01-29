@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs') %>
+
+<body>
+
+  <%- include('partials/nav.ejs') %><br><br>
+  <header>
+    <h1>My Trails</h1>
+  </header>
+
+  <main>
+    <div id="trails">
+      <h1 class="text-center">Search Results</h1>
+      <!--Checks if there are any results-->
+      <% if (trails.length == 0) {%>
+        <h1 class="text-center">No Trails Found</h1>
+      <% } %>
+
+      <%for (trail of trails) {%>
+        <div class="searchResults">
+          <p>
+          <b><%=trail.Name%></b><br>
+          City: <%=trail.City%><br>
+          Miles: <%=trail.Miles%><br>
+          Elevation: <%=trail.Elevation%><br>
+          Difficulty: <%=trail.Difficulty%><br>
+          Estimated Time: 12.50<br>
+          </p>
+          
+          <div class="TxtArea">Description:<br><textarea rows=10 cols=40><%=trail.Description%></textarea></div>
+
+          <form action="/removeFromMyTrails" method="post">
+        <input type="hidden" name="trailId" value="<%= trail.Trail_ID%>">
+        <input type="submit" class="addToTrails" value="Remove from My Trails"></input>
+        </form>
+          
+        </div><br>
+      <% } %>
+    </div>
+  </main>
+
+</body>
+</html>

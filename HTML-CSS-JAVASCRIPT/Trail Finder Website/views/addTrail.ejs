@@ -1,0 +1,48 @@
+<%- include ('partials/header.ejs') %>
+
+<body>
+  <%- include('partials/nav.ejs') %>
+  <header>
+    <h1> Adding Authors</h1>
+  </header>
+  <hr>
+  <main>
+    <form method="POST" action="/trail/new">
+      Name:
+      <input type="text" name="name"> <br><br>
+      
+      City:
+      <input type="text" name="city"> <br><br>
+
+      Miles:
+      <input type="text" name="miles"><br><br>
+
+      Elevation:
+      <input type="text" name="elevation"> <br><br>
+
+      Difficulty:
+      <input type="radio" name="difficulty" value="Easy">Beginner
+      <input type="radio" name="difficulty" value="Moderate">Intermediate
+      <input type="radio" name="difficulty" value="Hard">Expert
+      <br><br>
+
+      Estimated Time:
+      <input type="text" name="estTime"><br><br>
+  
+      Description:<br>
+      <TEXTAREA Name="description" ROWS="7" COLS="50"></TEXTAREA>
+      
+      <br><br>
+      <button class="addToTrails">Add Trail</button>
+
+    </form><br>
+
+    <!--Need to add condition in order to display-->
+    <%if (typeof message != "undefined") { %>
+      <h4> <%=message%> </h4>
+    <% } %>
+  </main>
+
+  <br>
+</body>
+</html>

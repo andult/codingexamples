@@ -1,0 +1,124 @@
+/* BODY--------------------------------- */
+body {
+  background-color:olivedrab;
+  /*height: 500px; */
+  background-size: 100%;
+  color: wheat;
+}
+
+
+/* NAVIGATION--------------------------- */
+nav {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.336);
+  margin: 20px auto;
+  width: 75%;
+}
+
+a {
+  background-color: white;
+  text-decoration: none;
+  border: thin black solid;
+  color: black;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  padding: 10px;
+}
+
+a:hover {
+  background-color: gainsboro; 
+}
+
+#login {
+  background-color: rgb(204, 204, 204);
+  color: white;
+}
+
+#errorMsg {
+  background-color: red;
+}
+
+/* LOGIN DISPLAY------------------------ */
+.loginDisplay {
+  width: 220px;
+  margin: 0 auto;
+  display: table;
+}
+
+.tableCell {
+  float: left;
+  display: table-cell;
+  padding-right: 5px;
+}
+
+/* INDEX DISPLAY------------------------ */
+#homeDisplay {
+  background-color: rgba(0, 0, 0, 0.336);
+  border: thick white solid;
+  text-align: center;
+  /* color: wheat; */
+  margin: 0% 15% 15% 15%;
+  padding: 5%;
+  font-size: 48px;
+}
+
+h1 {
+  /* color: wheat; */
+  text-align: center;
+}
+
+/* BROWSE STYLE---------------------------- */
+#searchBar {
+  margin: 5%;
+  padding: 3%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px 65px 10px;
+}
+
+#txtInput {
+  display: flex;
+  /* margin: 20px */
+}
+
+input {
+  margin: auto;
+}
+
+.searchResults {
+  border: thin black solid;
+  margin: 2%;
+  display: flex;
+  padding: 2%;
+}
+
+.addToTrails input[type=submit]{
+  width: 25%;
+  height: 30px;
+  margin: auto 25px auto 10%;
+}
+
+.TxtArea {
+  margin: auto 25px auto 10%;
+}
+
+b {
+  font-size: 40px;
+}
+
+/* LISTING ALL TRAILS FOR ADMIN */
+.resultsTable {
+  margin: 2% 12% 2% 12%;
+}
+
+table {
+  margin: 0px 30px 10px 30px;
+  text-align: left;
+}
+
+table, th, td {
+  text-align: left;
+  border-collapse: collapse;
+  border: thin solid black;
+  padding: 5px;
+}

@@ -1,0 +1,48 @@
+<%- include ('partials/header.ejs') %>
+
+<body>
+<%- include ('partials/nav.ejs') %>
+<header>
+  <h1>Update Trail</h1>
+</header>
+<main>
+ <form method="POST" action="/trail/edit"> 
+    Name:
+    <input type="text" name="name" value="<%=trails[0].Name%>"> 
+    <br>
+    
+    City:
+    <input type="text" name="city" value="<%=trails[0].City%>"> 
+    <br>
+
+    Miles:
+    <input type="text" name="miles" value="<%=trails[0].Miles%>">
+    <br>  
+    
+    Elevation:
+    <input type="text" name="elevation" value="<%=trails[0].Elevation%>">
+    <br>
+
+    Difficulty:
+    <input <%=(trails[0].Difficulty == "Easy")?"checked":""%> type="radio" name="difficulty" value="Easy">Beginner
+
+    <input <%=(trails[0].Difficulty == "Moderate")?"checked":""%> type="radio" name="difficulty" value="Moderate">Intermediate
+
+    <input <%=(trails[0].Difficulty == "Hard")?"checked":""%> type="radio" name="difficulty" value="Hard">Expert
+    <br><br>
+
+    Estimated Time:
+    <input type="text" name="estTime" value="<%=trails[0].Estimated_Time%>"><br><br>
+    
+    Description:<br>
+    <textarea Name="description" ROWS="7" COLS="50" ><%=trails[0].Description%></textarea>
+
+    <input type="hidden" name="trailId" value="<%=trails[0].Trail_ID%>">
+    <br><br>
+    <button>Update Trail</button>
+
+  </form><br>
+</main>
+
+</body>
+</html>

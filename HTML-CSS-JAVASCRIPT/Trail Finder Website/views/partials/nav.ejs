@@ -1,0 +1,13 @@
+<nav>  
+  <a href="/">Home  </a> 
+  <a href="/browse">Browse  </a> 
+  <a href="/myTrails">My Trails  </a> 
+  <%if (typeof userId != "undefined" && userId != -1) { %>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a id="login" href="/login">Login</a> 
+  <% } %>
+  <%if (typeof userId != "undefined" && userId == 4) { %>
+    <a href="/admin">Admin</a>
+  <% } %>
+</nav>

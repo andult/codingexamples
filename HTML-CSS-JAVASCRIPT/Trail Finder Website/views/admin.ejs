@@ -1,0 +1,34 @@
+<!--THIS PAGE IS FOR ADMIN ONLY
+    WILL GIVE ADD/UPDATE OPTION-->
+<%- include('partials/header.ejs') %>
+
+<body>
+  <%- include('partials/nav.ejs') %>
+  <header>
+    <h1>All Trails</h1>
+  </header>
+
+  <main>
+    <form action="/trail/new">
+      <!--TODO: add action -->
+      <br><button class="addToTrails" style="margin-left: 37%">Add a New Trail</button>
+    </form>
+
+    <div class="resultsTable">
+      <table style="width:100%">
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>City</th> 
+          <th>Miles</th>
+          <th>Elevation</th>
+          <th>Difficulty</th>
+          <th>Estimated Time</th>
+        </tr>
+      </table>
+    </div>
+  </main>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>

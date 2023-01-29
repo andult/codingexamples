@@ -1,0 +1,75 @@
+<%- include("partials/header.ejs")%>
+
+<body>
+  <%- include('partials/nav.ejs') %>
+  <form id="searchBar" action="/browse"> <!--For now, assume all inputs are valid search terms. Will create robust SELECT statement later.-->
+    <div id="txtInput">
+      <input style="margin=100px" type="text" name="trailName" placeholder="Trail Name..." value=""><br>
+
+      <input type="text" name="miles" placeholder="Miles..." value=""><br>
+
+      <input type="text" name="elevation" placeholder="Elevation..." value=""><br>
+      <!-- Putting br before label for button causes first radio button to be unlabelled -->
+    </div>
+    <br>
+
+    <select id="cityName" name="city">
+      <option value="">Select City</option>
+    </select><br><br>
+
+    Difficulty:
+    <input type="radio" name="difficulty" value="Easy">Beginner
+    <input type="radio" name="difficulty" value="Moderate">Intermediate
+    <input type="radio" name="difficulty" value="Hard">Expert
+
+    <br><br><button>Search</button>
+    <br>
+  </form>
+
+  <!--RESULTS------------------------------------------------------->
+  <!--checks if 'trails' was sent to page-->
+<%if (typeof trails != undefined) {%>
+  <div id="trails">
+    <h1 class="text-center">Search Results</h1>
+    <!--Checks if there are any results-->
+    <% if (trails.length == 0) {%>
+      <h1 class="text-center">No Trails Found</h1>
+    <% } %>
+
+    <%for (trail of trails) {%>
+      <div class="searchResults">
+        <p>
+        <b><%=trail.Name%></b><br>
+        City: <%=trail.City%><br>
+        Miles: <%=trail.Miles%><br>
+        Elevation: <%=trail.Elevation%><br>
+        Difficulty: <%=trail.Difficulty%><br>
+        Estimated Time: 12.50<br>
+        </p>
+        
+        <div class="TxtArea">Description:<br><textarea rows=10 cols=40><%=trail.Description%></textarea></div>
+        <form action="/browse" method="post">
+        <input type="hidden" name="trailId" value="<%= trail.Trail_ID%>">
+        <input type="submit" class="addToTrails" value="Add to My Trails"></input>
+        </form>
+      </div><br>
+    <% } %>
+  </div>
+<% } %>
+
+  <script src="/script/script.js"></script>
+</body>
+</html>
+
+
+<!-- TRAIL TABLE COLUMNS
+table name - trails
+Trail_ID	int	
+Name	varchar(20)	
+City	varchar(20)	
+Miles	float	
+Elevation	int	
+Difficulty	varchar(20)	
+Estimated_Time	time(6)	
+Description	varchar(500)	
+-->

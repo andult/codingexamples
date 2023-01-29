@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<body>
+
+  <%- include('partials/nav.ejs') %><br><br>
+  <header>
+    <h1>Login</h1>
+  </header>
+  <main>
+    <div class="loginDisplay">
+        Username:
+        <input type="text" id="username" name="username"> <br>
+        Password:
+        <input type="password" id="password" name="password"> <br> <br>
+
+        <div class="tableCell">
+          <button id="loginButton">Login</button>
+        </div>
+    
+      <form action="/createAccount">
+        <div class="tableCell">
+          <button>Create Account</button>
+        </div>
+      </form>
+      <br>
+      <h3 id="errorMsg"></h3>
+    </div>
+  </main>  
+  <script src="/script/script.js"></script>
+</body>
+</html>
