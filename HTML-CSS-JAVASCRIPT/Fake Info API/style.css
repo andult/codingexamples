@@ -1,0 +1,22 @@
+body {
+    background-color:olivedrab;
+    color: white;
+}
+
+h1 {
+    margin-top: 5%;
+    text-align: center;
+}
+
+fieldset {
+    margin: 10%;
+    margin-top: 1%;
+    padding: 2.5%;
+}
+
+#APIinfo {
+    margin: 10%;
+    border: thin silver solid;
+    padding: 2.5%;
+    word-wrap: break-word;
+}
